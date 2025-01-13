@@ -21,7 +21,7 @@ const ProductDetails = () => {
   return (
     <div className="p-8 bg-gradient-to-r from-blue-50 via-indigo-100 to-purple-100 rounded-lg shadow-lg">
       <h1 className="text-3xl font-bold mb-6 text-center text-blue-700">Product Details</h1>
-      <table className="min-w-full table-auto border-collapse border border-indigo-300">
+      <table className="w-50 h-50 table-auto border-collapse border border-indigo-300">
         <thead>
           <tr className="bg-gradient-to-r from-green-200 to-blue-200 text-left">
             <th className="border border-gray-300 px-4 py-2 text-indigo-700">Product Image</th>

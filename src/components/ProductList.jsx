@@ -27,7 +27,6 @@ const Products = () => {
   }, []);
 
   useEffect(() => {
-    // For Calculate the products to be shown on the current page
     const offset = (page - 1) * itemsPerPage;
     const paginatedProducts = products.slice(offset, offset + itemsPerPage);
     setCurrentProducts(paginatedProducts);
@@ -48,7 +47,7 @@ const Products = () => {
         ) : (
           <table className="table-auto w-full border-collapse">
             <thead>
-              <tr className="bg-blue-600 text-white">
+              <tr style={{ backgroundColor: "#007BFF", color: "white" }}>
                 <th className="px-6 py-4 text-left">ID</th>
                 <th className="px-6 py-4 text-left">Title</th>
                 <th className="px-6 py-4 text-center">Price</th>
@@ -60,9 +59,10 @@ const Products = () => {
               {currentProducts.map((product, index) => (
                 <tr
                   key={product.id}
-                  className={`${
-                    index % 2 === 0 ? "bg-gray-50" : "bg-gray-100"
-                  } hover:bg-gray-200`}
+                  style={{
+                    backgroundColor: index % 2 === 0 ? "#F8F9FA" : "#FFFFFF",
+                  }}
+                  className="hover:bg-gray-200"
                 >
                   <td className="px-6 py-4">{product.id}</td>
                   <td className="px-6 py-4">{product.title}</td>
@@ -70,7 +70,13 @@ const Products = () => {
                   <td className="px-6 py-4">{product.category}</td>
                   <td className="px-6 py-4 text-center">
                     <button
-                      className="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600"
+                      style={{
+                        backgroundColor: "#28A745",
+                        color: "white",
+                        padding: "8px 16px",
+                        borderRadius: "8px",
+                        cursor: "pointer",
+                      }}
                       onClick={() => handleViewDetails(product.id)}
                     >
                       View Details
@@ -88,22 +94,31 @@ const Products = () => {
         </p>
         <div>
           <button
-            className={`px-4 py-2 mr-2 text-sm font-semibold rounded-lg ${
-              page === 1
-                ? "bg-gray-300 text-gray-600 cursor-not-allowed"
-                : "bg-blue-500 text-white hover:bg-blue-600"
-            }`}
+            style={{
+              padding: "8px 16px",
+              fontSize: "14px",
+              fontWeight: "600",
+              borderRadius: "8px",
+              backgroundColor: page === 1 ? "#D6D6D6" : "#007BFF",
+              color: page === 1 ? "#6C757D" : "white",
+              cursor: page === 1 ? "not-allowed" : "pointer",
+            }}
             disabled={page === 1}
             onClick={() => setPage(page - 1)}
           >
             Previous
           </button>
           <button
-            className={`px-4 py-2 text-sm font-semibold rounded-lg ${
-              page * itemsPerPage >= products.length
-                ? "bg-gray-300 text-gray-600 cursor-not-allowed"
-                : "bg-blue-500 text-white hover:bg-blue-600"
-            }`}
+            style={{
+              padding: "8px 16px",
+              fontSize: "14px",
+              fontWeight: "600",
+              borderRadius: "8px",
+              backgroundColor:
+                page * itemsPerPage >= products.length ? "#D6D6D6" : "#007BFF",
+              color: page * itemsPerPage >= products.length ? "#6C757D" : "white",
+              cursor: page * itemsPerPage >= products.length ? "not-allowed" : "pointer",
+            }}
             disabled={page * itemsPerPage >= products.length}
             onClick={() => setPage(page + 1)}
           >
