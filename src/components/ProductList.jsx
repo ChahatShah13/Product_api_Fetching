@@ -66,7 +66,7 @@ const Products = () => {
                 >
                   <td className="px-6 py-4">{product.id}</td>
                   <td className="px-6 py-4">{product.title}</td>
-                  <td className="px-6 py-4 text-center">{product.price}</td>
+                  <td className="px-6 py-4 text-center">Rs. {product.price}</td>
                   <td className="px-6 py-4">{product.category}</td>
                   <td className="px-6 py-4 text-center">
                     <button

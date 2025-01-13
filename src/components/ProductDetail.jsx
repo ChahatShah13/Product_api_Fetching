@@ -52,7 +52,7 @@ const ProductDetails = () => {
                   </tr>
                   <tr>
                     <td className="font-semibold text-indigo-600">Price:</td>
-                    <td className="text-green-600">{product.price}</td>
+                    <td className="text-green-600">Rs. {product.price}</td>
                   </tr>
                   <tr>
                     <td className="font-semibold text-indigo-600">Rate:</td>
