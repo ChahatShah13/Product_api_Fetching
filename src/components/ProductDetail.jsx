@@ -19,11 +19,11 @@ const ProductDetails = () => {
   }
 
   return (
-    <div className="p-8 bg-gradient-to-r from-blue-50 via-indigo-100 to-purple-100 rounded-lg shadow-lg">
+    <div className="p-8 bg-white rounded-lg shadow-lg">
       <h1 className="text-3xl font-bold mb-6 text-center text-blue-700">Product Details</h1>
       <table className="table-auto border-collapse border border-indigo-300">
         <thead>
-          <tr className="bg-gradient-to-r from-green-200 to-blue-200 text-left">
+          <tr className="bg-white text-left">
             <th className="border border-gray-300 px-4 py-2 text-indigo-700">Product Image</th>
             <th className="border border-gray-300 px-4 py-2 text-indigo-700">Product Information</th>
           </tr>
@@ -70,7 +70,7 @@ const ProductDetails = () => {
       </table>
       <div className="text-center mt-6">
         <Link to="/">
-          <button className="bg-gradient-to-r from-green-400 to-blue-500 text-white px-6 py-3 rounded-full hover:from-green-500 hover:to-blue-600 transition-all duration-300">
+          <button className="bg-black text-white px-6 py-3 rounded-full hover:from-green-500 hover:to-blue-600 transition-all duration-300">
             Back to Products
           </button>
         </Link>
