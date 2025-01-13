@@ -30,7 +30,6 @@ const ProductDetails = () => {
         </thead>
         <tbody>
           <tr className="text-center">
-            {/* Product Image */}
             <td className="border border-gray-300 px-4 py-6">
               <img
                 src={product.image}
@@ -38,7 +37,6 @@ const ProductDetails = () => {
                 className="w-100 h-100 object-cover mx-auto rounded-md shadow-lg border-4 border-blue-300"
               />
             </td>
-            {/* Product Details */}
             <td className="border border-gray-300 px-4 py-6">
               <table className="w-full text-left">
                 <tbody>
